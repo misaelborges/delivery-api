@@ -1,5 +1,6 @@
 package com.misaeborges.deliveryapi.api;
 
+import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.domain.model.Restaurant;
 import com.misaeborges.deliveryapi.domain.services.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class RestaurantController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Restaurant save(@RequestBody Restaurant restaurant) {
+    public Restaurant save(@RequestBody RestaurantRequestDTO restaurant) {
         return restaurantService.save(restaurant);
     }
 

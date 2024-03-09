@@ -1,5 +1,6 @@
 package com.misaeborges.deliveryapi.domain.model;
 
+import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -31,5 +32,12 @@ public class Restaurant {
     @UpdateTimestamp
     @Column(nullable = false, columnDefinition = "datetime")
     private LocalDateTime updateDate;
+
+    public Restaurant(RestaurantRequestDTO restaurantDTO) {
+        this.name = restaurantDTO.name();
+        this.deliveryFees = restaurantDTO.deliveryFees();
+        this.registrationDate = restaurantDTO.registrationDate();
+        this.updateDate = restaurantDTO.updateDate();
+    }
 
 }
