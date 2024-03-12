@@ -2,16 +2,21 @@ package com.misaeborges.deliveryapi.domain.model;
 
 import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Restaurant {
 
@@ -33,7 +38,7 @@ public class Restaurant {
     @Column(nullable = false, columnDefinition = "datetime")
     private LocalDateTime updateDate;
 
-    public Restaurant(RestaurantRequestDTO restaurantDTO) {
+    public Restaurant(@NotNull RestaurantRequestDTO restaurantDTO) {
         this.name = restaurantDTO.name();
         this.deliveryFees = restaurantDTO.deliveryFees();
         this.registrationDate = restaurantDTO.registrationDate();
