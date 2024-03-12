@@ -22,9 +22,13 @@ public class RestaurantController {
     private IRestaurantRepository restaurantRepository;
 
     @GetMapping
-    @ResponseStatus(HttpStatus.OK)
     public List<RestaurantResponseDTO> findAll() {
         return restaurantRepository.findAll().stream().map(RestaurantResponseDTO::new).toList();
+    }
+
+    @GetMapping("/{id}")
+    public Restaurant findById(@PathVariable Long id) {
+        return restaurantService.searchEngine(id);
     }
 
     @PostMapping
