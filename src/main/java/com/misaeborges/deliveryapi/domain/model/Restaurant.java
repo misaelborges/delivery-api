@@ -1,5 +1,6 @@
 package com.misaeborges.deliveryapi.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,13 +28,16 @@ public class Restaurant {
     @Column(nullable = false)
     private String name;
 
+    @JsonIgnore
     @Column(nullable = false)
     private BigDecimal deliveryFees;
 
+    @JsonIgnore
     @CreationTimestamp
     @Column(nullable = false, columnDefinition = "datetime")
     private LocalDateTime registrationDate;
 
+    @JsonIgnore
     @UpdateTimestamp
     @Column(nullable = false, columnDefinition = "datetime")
     private LocalDateTime updateDate;
