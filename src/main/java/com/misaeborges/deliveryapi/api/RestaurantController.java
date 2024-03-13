@@ -5,6 +5,7 @@ import com.misaeborges.deliveryapi.domain.dto.RestaurantResponseDTO;
 import com.misaeborges.deliveryapi.domain.model.Restaurant;
 import com.misaeborges.deliveryapi.domain.repositories.IRestaurantRepository;
 import com.misaeborges.deliveryapi.domain.services.RestaurantService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +36,14 @@ public class RestaurantController {
     @ResponseStatus(HttpStatus.CREATED)
     public Restaurant save(@RequestBody RestaurantRequestDTO restaurant) {
         return restaurantService.save(restaurant);
+    }
+
+    @PutMapping("/{id}")
+    public Restaurant update(@RequestBody RestaurantRequestDTO restaurantData, @PathVariable Long id) {
+        Restaurant restaurant = restaurantService.searchEngine(id);
+
+        BeanUtils.copyProperties(restaurantData, restaurant, "id", "registrationDate");
+        return restaurantRepository.save(restaurant);
     }
 
 }
