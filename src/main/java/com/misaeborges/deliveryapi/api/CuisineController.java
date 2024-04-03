@@ -26,6 +26,11 @@ public class CuisineController {
         return cuisineRespository.findAll().stream().map(CuisineResponseDTO::new).toList();
     }
 
+    @GetMapping("/{id}")
+    public Cuisine findById(@PathVariable Long id) {
+        return cuisineService.searchEngine(id);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Cuisine save(@RequestBody CuisineResquestDTO cuisineResquestDTO) {
