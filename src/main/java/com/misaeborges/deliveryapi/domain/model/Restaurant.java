@@ -51,6 +51,7 @@ public class Restaurant {
         this.deliveryFees = restaurantDTO.deliveryFees();
         this.registrationDate = restaurantDTO.registrationDate();
         this.updateDate = restaurantDTO.updateDate();
+        this.cuisine = restaurantDTO.cuisine();
     }
 
 }
