@@ -42,6 +42,10 @@ public class Restaurant {
     @Column(nullable = false, columnDefinition = "datetime")
     private LocalDateTime updateDate;
 
+    @ManyToOne
+    @JoinColumn(name = "cuisine_id", nullable = false)
+    private Cuisine cuisine;
+
     public Restaurant(@NotNull RestaurantRequestDTO restaurantDTO) {
         this.name = restaurantDTO.name();
         this.deliveryFees = restaurantDTO.deliveryFees();
