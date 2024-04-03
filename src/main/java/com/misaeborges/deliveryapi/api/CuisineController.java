@@ -45,4 +45,10 @@ public class CuisineController {
         BeanUtils.copyProperties(cuisineData, cuisine, "id");
         return cuisineRespository.save(cuisine);
     }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public void delete(@PathVariable Long id) {
+        cuisineService.delete(id);
+    }
 }
