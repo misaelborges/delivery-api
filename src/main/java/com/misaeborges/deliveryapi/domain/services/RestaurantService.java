@@ -2,6 +2,7 @@ package com.misaeborges.deliveryapi.domain.services;
 
 import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.domain.exception.RestaurantNotFoundException;
+import com.misaeborges.deliveryapi.domain.model.Cuisine;
 import com.misaeborges.deliveryapi.domain.model.Restaurant;
 import com.misaeborges.deliveryapi.domain.repositories.IRestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,17 @@ public class RestaurantService {
     @Autowired
     private IRestaurantRepository restaurantRepository;
 
+    @Autowired
+    private CuisineService cuisineService;
+
 
     public Restaurant save(RestaurantRequestDTO data) {
+        Cuisine cuisine = cuisineService.searchEngine(data.cuisine().getId());
+
         Restaurant restaurant = new Restaurant(data);
+
+        restaurant.setCuisine(cuisine);
+
         return restaurantRepository.save(restaurant);
     }
 
