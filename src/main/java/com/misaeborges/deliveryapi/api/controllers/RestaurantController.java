@@ -1,8 +1,8 @@
-package com.misaeborges.deliveryapi.api;
+package com.misaeborges.deliveryapi.api.controllers;
 
 import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.domain.dto.RestaurantResponseDTO;
-import com.misaeborges.deliveryapi.domain.model.Restaurant;
+import com.misaeborges.deliveryapi.domain.models.Restaurant;
 import com.misaeborges.deliveryapi.domain.repositories.IRestaurantRepository;
 import com.misaeborges.deliveryapi.domain.services.RestaurantService;
 import org.springframework.beans.BeanUtils;

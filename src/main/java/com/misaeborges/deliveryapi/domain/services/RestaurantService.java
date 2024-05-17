@@ -2,12 +2,13 @@ package com.misaeborges.deliveryapi.domain.services;
 
 import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.domain.exception.RestaurantNotFoundException;
-import com.misaeborges.deliveryapi.domain.model.Cuisine;
-import com.misaeborges.deliveryapi.domain.model.Restaurant;
+import com.misaeborges.deliveryapi.domain.models.Cuisine;
+import com.misaeborges.deliveryapi.domain.models.Restaurant;
 import com.misaeborges.deliveryapi.domain.repositories.IRestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class RestaurantService {
@@ -18,7 +19,7 @@ public class RestaurantService {
     @Autowired
     private CuisineService cuisineService;
 
-
+    @Transactional
     public Restaurant save(RestaurantRequestDTO data) {
         Cuisine cuisine = cuisineService.searchEngine(data.cuisine().getId());
 
@@ -29,6 +30,7 @@ public class RestaurantService {
         return restaurantRepository.save(restaurant);
     }
 
+    @Transactional
     public void delete(Long id) {
         try {
             restaurantRepository.deleteById(id);

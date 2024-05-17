@@ -1,7 +1,7 @@
 package com.misaeborges.deliveryapi.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.misaeborges.deliveryapi.domain.model.Restaurant;
+import com.misaeborges.deliveryapi.domain.models.Restaurant;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

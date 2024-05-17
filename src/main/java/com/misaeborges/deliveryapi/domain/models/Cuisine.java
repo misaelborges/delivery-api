@@ -1,4 +1,4 @@
-package com.misaeborges.deliveryapi.domain.model;
+package com.misaeborges.deliveryapi.domain.models;
 
 import com.misaeborges.deliveryapi.domain.dto.CuisineResquestDTO;
 import jakarta.persistence.*;

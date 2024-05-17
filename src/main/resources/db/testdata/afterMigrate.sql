@@ -2,11 +2,13 @@ set foreign_key_checks = 0;
 
 delete from cuisine;
 delete from restaurant;
+delete from state;
 
 set foreign_key_checks = 1;
 
 alter table cuisine auto_increment = 1;
 alter table restaurant auto_increment = 1;
+alter table state auto_increment = 1;
 
 insert into cuisine (id, name) values (1, 'Tailandesa');
 insert into cuisine (id, name) values (2, 'Indiana');
@@ -19,3 +21,7 @@ insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, 
 insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date) values (4, 'Java Steakhouse', 12, 3, utc_timestamp, utc_timestamp);
 insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date) values (5, 'Lanchonete do Tio Sam', 11, 4, utc_timestamp, utc_timestamp);
 insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date) values (6, 'Bar da Maria', 6, 4, utc_timestamp, utc_timestamp);
+
+insert into state (id, name) values (1, 'Minas Gerais');
+insert into state (id, name) values (2, 'São Paulo');
+insert into state (id, name) values (3, 'Ceará');

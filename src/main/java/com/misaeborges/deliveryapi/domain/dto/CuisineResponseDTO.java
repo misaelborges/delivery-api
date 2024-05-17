@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.domain.dto;
 
-import com.misaeborges.deliveryapi.domain.model.Cuisine;
+import com.misaeborges.deliveryapi.domain.models.Cuisine;
 
 public record CuisineResponseDTO(Long id, String name) {
 
