@@ -1,6 +1,5 @@
 package com.misaeborges.deliveryapi.domain.models;
 
-import com.misaeborges.deliveryapi.domain.dto.StateRequestDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,7 +24,4 @@ public class State {
     @NotBlank
     private String name;
 
-    public State(StateRequestDTO stateRequestDTO) {
-        setName(stateRequestDTO.name());
-    }
 }

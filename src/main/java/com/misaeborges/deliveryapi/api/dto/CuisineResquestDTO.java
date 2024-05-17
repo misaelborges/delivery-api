@@ -1,4 +1,4 @@
-package com.misaeborges.deliveryapi.domain.dto;
+package com.misaeborges.deliveryapi.api.dto;
 
 public record CuisineResquestDTO(String name) {
 }

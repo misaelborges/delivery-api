@@ -1,4 +1,4 @@
-package com.misaeborges.deliveryapi.domain.dto;
+package com.misaeborges.deliveryapi.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.misaeborges.deliveryapi.domain.models.Restaurant;

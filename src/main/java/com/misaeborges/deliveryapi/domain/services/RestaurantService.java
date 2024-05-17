@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.domain.services;
 
-import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.domain.exception.RestaurantNotFoundException;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
 import com.misaeborges.deliveryapi.domain.models.Restaurant;
@@ -39,7 +39,7 @@ public class RestaurantService {
         }
     }
 
-    public Restaurant searchEngine( Long id) {
+    public Restaurant searchEngine(Long id) {
         return restaurantRepository.findById(id).orElseThrow(() -> new RestaurantNotFoundException(id));
     }
 }

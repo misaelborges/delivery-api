@@ -1,7 +1,7 @@
 package com.misaeborges.deliveryapi.api.controllers;
 
-import com.misaeborges.deliveryapi.domain.dto.CuisineResponseDTO;
-import com.misaeborges.deliveryapi.domain.dto.CuisineResquestDTO;
+import com.misaeborges.deliveryapi.api.dto.CuisineResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.CuisineResquestDTO;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
 import com.misaeborges.deliveryapi.domain.repositories.ICuisineRespository;
 import com.misaeborges.deliveryapi.domain.services.CuisineService;

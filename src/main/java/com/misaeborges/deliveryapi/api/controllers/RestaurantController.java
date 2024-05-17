@@ -1,7 +1,7 @@
 package com.misaeborges.deliveryapi.api.controllers;
 
-import com.misaeborges.deliveryapi.domain.dto.RestaurantRequestDTO;
-import com.misaeborges.deliveryapi.domain.dto.RestaurantResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.RestaurantRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.RestaurantResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.Restaurant;
 import com.misaeborges.deliveryapi.domain.repositories.IRestaurantRepository;
 import com.misaeborges.deliveryapi.domain.services.RestaurantService;

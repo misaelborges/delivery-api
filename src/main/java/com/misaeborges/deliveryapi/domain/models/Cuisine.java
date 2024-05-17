@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.domain.models;
 
-import com.misaeborges.deliveryapi.domain.dto.CuisineResquestDTO;
+import com.misaeborges.deliveryapi.api.dto.CuisineResquestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

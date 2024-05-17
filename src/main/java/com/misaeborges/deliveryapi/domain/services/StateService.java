@@ -1,6 +1,5 @@
 package com.misaeborges.deliveryapi.domain.services;
 
-import com.misaeborges.deliveryapi.domain.dto.StateRequestDTO;
 import com.misaeborges.deliveryapi.domain.exception.EntityInUseException;
 import com.misaeborges.deliveryapi.domain.exception.StateNotFoundException;
 import com.misaeborges.deliveryapi.domain.models.State;

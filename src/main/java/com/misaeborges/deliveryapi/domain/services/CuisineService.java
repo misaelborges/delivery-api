@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.domain.services;
 
-import com.misaeborges.deliveryapi.domain.dto.CuisineResquestDTO;
+import com.misaeborges.deliveryapi.api.dto.CuisineResquestDTO;
 import com.misaeborges.deliveryapi.domain.exception.CuisineNotFoundException;
 import com.misaeborges.deliveryapi.domain.exception.EntityInUseException;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
