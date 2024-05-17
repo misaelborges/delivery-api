@@ -1,11 +1,13 @@
 package com.misaeborges.deliveryapi.api.controllers;
 
+import com.misaeborges.deliveryapi.api.assemblers.RestaurantRequestDisassembler;
+import com.misaeborges.deliveryapi.api.assemblers.RestaurantResponseAssembler;
 import com.misaeborges.deliveryapi.api.dto.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.api.dto.RestaurantResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.Restaurant;
 import com.misaeborges.deliveryapi.domain.repositories.IRestaurantRepository;
 import com.misaeborges.deliveryapi.domain.services.RestaurantService;
-import org.springframework.beans.BeanUtils;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -22,28 +24,36 @@ public class RestaurantController {
     @Autowired
     private IRestaurantRepository restaurantRepository;
 
+    @Autowired
+    private RestaurantResponseAssembler restaurantResponseAssembler;
+
+    @Autowired
+    private RestaurantRequestDisassembler restaurantRequestDisassembler;
+
     @GetMapping
     public List<RestaurantResponseDTO> findAll() {
-        return restaurantRepository.findAll().stream().map(RestaurantResponseDTO::new).toList();
+        return restaurantResponseAssembler.toCollectionModel(restaurantRepository.findAll());
     }
 
     @GetMapping("/{id}")
-    public Restaurant findById(@PathVariable Long id) {
-        return restaurantService.searchEngine(id);
+    public RestaurantResponseDTO findById(@PathVariable Long id) {
+        return restaurantResponseAssembler.toModel(restaurantService.searchEngine(id));
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Restaurant save(@RequestBody RestaurantRequestDTO restaurant) {
-        return restaurantService.save(restaurant);
+    public RestaurantResponseDTO save(@RequestBody @Valid RestaurantRequestDTO requestDTO) {
+        Restaurant restaurant = restaurantRequestDisassembler.toDomainObject(requestDTO);
+        return restaurantResponseAssembler.toModel(restaurantService.save(restaurant));
     }
 
     @PutMapping("/{id}")
-    public Restaurant update(@RequestBody RestaurantRequestDTO restaurantData, @PathVariable Long id) {
+    public RestaurantResponseDTO update(@RequestBody RestaurantRequestDTO restaurantData, @PathVariable Long id) {
         Restaurant restaurant = restaurantService.searchEngine(id);
 
-        BeanUtils.copyProperties(restaurantData, restaurant, "id", "registrationDate");
-        return restaurantRepository.save(restaurant);
+        restaurantRequestDisassembler.copyToDomainObject(restaurantData, restaurant);
+
+        return restaurantResponseAssembler.toModel(restaurantRepository.save(restaurant));
     }
 
     @DeleteMapping("/{id}")

@@ -1,6 +1,5 @@
 package com.misaeborges.deliveryapi.domain.models;
 
-import com.misaeborges.deliveryapi.api.dto.CuisineResquestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +20,4 @@ public class Cuisine {
     @Column(nullable = false)
     private String name;
 
-    public Cuisine(CuisineResquestDTO cuisineResquestDTO) {
-        this.name = cuisineResquestDTO.name();
-    }
 }

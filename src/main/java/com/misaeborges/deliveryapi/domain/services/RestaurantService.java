@@ -1,6 +1,5 @@
 package com.misaeborges.deliveryapi.domain.services;
 
-import com.misaeborges.deliveryapi.api.dto.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.domain.exception.RestaurantNotFoundException;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
 import com.misaeborges.deliveryapi.domain.models.Restaurant;
@@ -20,10 +19,8 @@ public class RestaurantService {
     private CuisineService cuisineService;
 
     @Transactional
-    public Restaurant save(RestaurantRequestDTO data) {
-        Cuisine cuisine = cuisineService.searchEngine(data.cuisine().getId());
-
-        Restaurant restaurant = new Restaurant(data);
+    public Restaurant save(Restaurant restaurant) {
+        Cuisine cuisine = cuisineService.searchEngine(restaurant.getCuisine().getId());
 
         restaurant.setCuisine(cuisine);
 

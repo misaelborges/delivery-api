@@ -1,16 +1,11 @@
 package com.misaeborges.deliveryapi.api.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.misaeborges.deliveryapi.domain.models.Restaurant;
+import lombok.Data;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
+@Data
+public class RestaurantResponseDTO {
 
-public record RestaurantResponseDTO(Long id, String name, @JsonIgnore BigDecimal deliveryFees, @JsonIgnore LocalDateTime registrationDate,
-                                    @JsonIgnore LocalDateTime updateDate) {
-
-    public RestaurantResponseDTO(Restaurant restaurant) {
-        this(restaurant.getId(), restaurant.getName(), restaurant.getDeliveryFees(),
-                restaurant.getRegistrationDate(), restaurant.getUpdateDate());
-    }
+    private Long id;
+    private String name;
+    private CuisineResponseDTO cuisine;
 }

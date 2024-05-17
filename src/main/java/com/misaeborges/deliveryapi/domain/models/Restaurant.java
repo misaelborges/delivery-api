@@ -46,12 +46,4 @@ public class Restaurant {
     @JoinColumn(name = "cuisine_id", nullable = false)
     private Cuisine cuisine;
 
-    public Restaurant(@NotNull RestaurantRequestDTO restaurantDTO) {
-        this.name = restaurantDTO.name();
-        this.deliveryFees = restaurantDTO.deliveryFees();
-        this.registrationDate = restaurantDTO.registrationDate();
-        this.updateDate = restaurantDTO.updateDate();
-        this.cuisine = restaurantDTO.cuisine();
-    }
-
 }

@@ -1,6 +1,5 @@
 package com.misaeborges.deliveryapi.domain.services;
 
-import com.misaeborges.deliveryapi.api.dto.CuisineResquestDTO;
 import com.misaeborges.deliveryapi.domain.exception.CuisineNotFoundException;
 import com.misaeborges.deliveryapi.domain.exception.EntityInUseException;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
@@ -18,8 +17,7 @@ public class CuisineService {
     private ICuisineRespository cuisineRespository;
 
     @Transactional
-    public Cuisine save(CuisineResquestDTO cuisineDate) {
-        Cuisine cuisine = new Cuisine(cuisineDate);
+    public Cuisine save(Cuisine cuisine) {
         return cuisineRespository.save(cuisine);
     }
 

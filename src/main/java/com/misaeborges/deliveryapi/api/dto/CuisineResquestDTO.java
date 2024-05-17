@@ -1,4 +1,11 @@
 package com.misaeborges.deliveryapi.api.dto;
 
-public record CuisineResquestDTO(String name) {
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class CuisineResquestDTO {
+
+    @NotBlank
+    private String name;
 }

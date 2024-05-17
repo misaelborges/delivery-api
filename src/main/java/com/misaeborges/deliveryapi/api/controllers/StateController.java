@@ -57,4 +57,10 @@ public class StateController {
         return responseAssembler.toModel(stateService.save(state));
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        stateService.delete(id);
+    }
+
 }
