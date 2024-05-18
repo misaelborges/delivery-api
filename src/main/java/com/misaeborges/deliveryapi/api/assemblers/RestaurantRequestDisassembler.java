@@ -18,6 +18,8 @@ public class RestaurantRequestDisassembler {
     }
 
     public void copyToDomainObject(RestaurantRequestDTO requestDTO, Restaurant restaurant) {
+        // para evitar org.hibernate.HibernateException: identifier of an instance of
+        // deliveryapi.domain.models.Cuisine was altered from 2 to 1
         restaurant.setCuisine(new Cuisine());
         modelMapper.map(requestDTO, restaurant);
     }
