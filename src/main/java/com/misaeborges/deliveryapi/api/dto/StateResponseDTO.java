@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class StateResponseDTO {
 
-    String name;
+    private Long id;
+    private String name;
 
 }

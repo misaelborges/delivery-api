@@ -7,6 +7,7 @@ import com.misaeborges.deliveryapi.api.dto.CuisineResquestDTO;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
 import com.misaeborges.deliveryapi.domain.repositories.ICuisineRespository;
 import com.misaeborges.deliveryapi.domain.services.CuisineService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -41,14 +42,14 @@ public class CuisineController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public CuisineResponseDTO save(@RequestBody CuisineResquestDTO cuisineResquestDTO) {
+    public CuisineResponseDTO save(@RequestBody @Valid CuisineResquestDTO cuisineResquestDTO) {
         Cuisine cuisine = cuisineRequestDisassembler.toDomainObject(cuisineResquestDTO);
 
         return responseAssembler.toModel(cuisineService.save(cuisine));
     }
 
     @PutMapping("/{id}")
-    public CuisineResponseDTO upload(@RequestBody CuisineResquestDTO cuisineData, @PathVariable Long id) {
+    public CuisineResponseDTO upload(@RequestBody @Valid CuisineResquestDTO cuisineData, @PathVariable Long id) {
         Cuisine cuisine = cuisineService.searchEngine(id);
 
         cuisineRequestDisassembler.copyToDomainObject(cuisineData, cuisine);
