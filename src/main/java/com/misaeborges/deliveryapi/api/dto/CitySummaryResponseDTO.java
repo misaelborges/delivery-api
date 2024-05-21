@@ -3,9 +3,9 @@ package com.misaeborges.deliveryapi.api.dto;
 import lombok.Data;
 
 @Data
-public class CityResponseDTO {
+public class CitySummaryResponseDTO {
 
     private Long id;
     private String name;
-    private AddressResponseDTO state;
+    private String state;
 }

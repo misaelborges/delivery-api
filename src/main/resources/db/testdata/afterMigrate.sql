@@ -17,7 +17,7 @@ insert into cuisine (id, name) values (2, 'Indiana');
 insert into cuisine (id, name) values (3, 'Argentina');
 insert into cuisine (id, name) values (4, 'Brasileira');
 
-insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date) values (1, 'Thai Gourmet', 10, 1, utc_timestamp, utc_timestamp);
+insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date, address_city_id, address_cep, address_street, address_number, address_neighborhood) values (1, 'Thai Gourmet', 10, 1, utc_timestamp, utc_timestamp, 1,  '38400-999', 'Rua João Pinheiro', '1000', 'Centro');
 insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date) values (2, 'Thai Delivery', 9.50, 1, utc_timestamp, utc_timestamp);
 insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date) values (3, 'Tuk Tuk Comida Indiana', 15, 2, utc_timestamp, utc_timestamp);
 insert into restaurant (id, name, delivery_fees, cuisine_id, registration_date, update_date) values (4, 'Java Steakhouse', 12, 3, utc_timestamp, utc_timestamp);

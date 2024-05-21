@@ -46,4 +46,7 @@ public class Restaurant {
     @JoinColumn(name = "cuisine_id", nullable = false)
     private Cuisine cuisine;
 
+    @Embedded
+    private Address address;
+
 }
