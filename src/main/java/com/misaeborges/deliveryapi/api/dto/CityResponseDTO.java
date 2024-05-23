@@ -7,5 +7,5 @@ public class CityResponseDTO {
 
     private Long id;
     private String name;
-    private AddressResponseDTO state;
+    private StateResponseDTO state;
 }

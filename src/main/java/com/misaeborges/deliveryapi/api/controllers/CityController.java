@@ -9,6 +9,7 @@ import com.misaeborges.deliveryapi.domain.repositories.ICityRepository;
 import com.misaeborges.deliveryapi.domain.services.CityService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,6 +41,7 @@ public class CityController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public CityResponseDTO save(@RequestBody @Valid CityRequestDTO cityRequestDTO) {
         City city = cityRequestDisassembler.toDomainObject(cityRequestDTO);
 
@@ -53,6 +55,12 @@ public class CityController {
         cityRequestDisassembler.copyToDomainObject(cityRequestDTO, city);
 
         return cityResponseAssembler.toModell(cityService.save(city));
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        cityService.delete(id);
     }
 
 }
