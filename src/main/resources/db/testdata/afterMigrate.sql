@@ -5,6 +5,8 @@ delete from restaurant;
 delete from state;
 delete from city;
 delete from permission;
+delete from grupo;
+delete from grupo_permission;
 
 set foreign_key_checks = 1;
 
@@ -13,6 +15,7 @@ alter table restaurant auto_increment = 1;
 alter table state auto_increment = 1;
 alter table city auto_increment = 1;
 alter table permission auto_increment = 1;
+alter table grupo auto_increment = 1;
 
 insert into cuisine (id, name) values (1, 'Tailandesa');
 insert into cuisine (id, name) values (2, 'Indiana');
@@ -38,3 +41,7 @@ insert into city (id, name, state_id) values (5, 'Fortaleza', 3);
 
 insert into permission (id, name, description) values (1, 'CONSULTAR_COZINHAS', 'Permite consultar cozinhas');
 insert into permission (id, name, description) values (2, 'EDITAR_COZINHAS', 'Permite editar cozinhas');
+
+insert into grupo (name) values ('Gerente'), ('Vendedor'), ('Secretária'), ('Cadastrador');
+
+insert into grupo_permission (group_id, permission_id) values (1, 1), (1, 2), (2, 1), (2, 2), (3, 1);
