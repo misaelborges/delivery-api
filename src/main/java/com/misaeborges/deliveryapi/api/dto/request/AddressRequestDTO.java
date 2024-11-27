@@ -1,9 +1,5 @@
-package com.misaeborges.deliveryapi.api.dto;
+package com.misaeborges.deliveryapi.api.dto.request;
 
-import com.misaeborges.deliveryapi.domain.models.City;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -28,6 +24,6 @@ public class AddressRequestDTO {
 
     @Valid
     @NotNull
-    private CityIdRequestDTO city;
+    private CityIdDTO city;
 
 }

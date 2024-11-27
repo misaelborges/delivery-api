@@ -2,8 +2,8 @@ package com.misaeborges.deliveryapi.api.controllers;
 
 import com.misaeborges.deliveryapi.api.assemblers.CuisineRequestDisassembler;
 import com.misaeborges.deliveryapi.api.assemblers.CuisineResponseAssembler;
-import com.misaeborges.deliveryapi.api.dto.CuisineResponseDTO;
-import com.misaeborges.deliveryapi.api.dto.CuisineResquestDTO;
+import com.misaeborges.deliveryapi.api.dto.response.CuisineResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.request.CuisineResquestDTO;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
 import com.misaeborges.deliveryapi.domain.repositories.ICuisineRespository;
 import com.misaeborges.deliveryapi.domain.services.CuisineService;

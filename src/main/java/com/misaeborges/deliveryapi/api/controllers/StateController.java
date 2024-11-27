@@ -2,8 +2,8 @@ package com.misaeborges.deliveryapi.api.controllers;
 
 import com.misaeborges.deliveryapi.api.assemblers.StateRequestDisassembler;
 import com.misaeborges.deliveryapi.api.assemblers.StateResponseAssembler;
-import com.misaeborges.deliveryapi.api.dto.StateRequestDTO;
-import com.misaeborges.deliveryapi.api.dto.StateResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.request.StateRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.response.StateResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.State;
 import com.misaeborges.deliveryapi.domain.repositories.IStateRepository;
 import com.misaeborges.deliveryapi.domain.services.StateService;

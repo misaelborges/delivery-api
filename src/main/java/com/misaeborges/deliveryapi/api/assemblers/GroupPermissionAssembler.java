@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.api.assemblers;
 
-import com.misaeborges.deliveryapi.api.dto.GroupPermissionResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.response.GroupPermissionResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.Group;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

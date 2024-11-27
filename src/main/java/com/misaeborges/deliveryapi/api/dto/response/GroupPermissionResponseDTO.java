@@ -1,4 +1,4 @@
-package com.misaeborges.deliveryapi.api.dto;
+package com.misaeborges.deliveryapi.api.dto.response;
 
 import com.misaeborges.deliveryapi.domain.models.Permission;
 import lombok.Data;

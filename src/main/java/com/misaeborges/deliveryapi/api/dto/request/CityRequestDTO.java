@@ -1,4 +1,4 @@
-package com.misaeborges.deliveryapi.api.dto;
+package com.misaeborges.deliveryapi.api.dto.request;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;

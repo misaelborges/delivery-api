@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.api.assemblers;
 
-import com.misaeborges.deliveryapi.api.dto.CuisineResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.response.CuisineResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

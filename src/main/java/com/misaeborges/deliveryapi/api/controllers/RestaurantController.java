@@ -2,8 +2,8 @@ package com.misaeborges.deliveryapi.api.controllers;
 
 import com.misaeborges.deliveryapi.api.assemblers.RestaurantRequestDisassembler;
 import com.misaeborges.deliveryapi.api.assemblers.RestaurantResponseAssembler;
-import com.misaeborges.deliveryapi.api.dto.RestaurantRequestDTO;
-import com.misaeborges.deliveryapi.api.dto.RestaurantResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.request.RestaurantRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.response.RestaurantResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.Restaurant;
 import com.misaeborges.deliveryapi.domain.repositories.IRestaurantRepository;
 import com.misaeborges.deliveryapi.domain.services.RestaurantService;

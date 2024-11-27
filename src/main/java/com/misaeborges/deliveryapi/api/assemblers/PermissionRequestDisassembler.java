@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.api.assemblers;
 
-import com.misaeborges.deliveryapi.api.dto.PermissionRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.request.PermissionRequestDTO;
 import com.misaeborges.deliveryapi.domain.models.Permission;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

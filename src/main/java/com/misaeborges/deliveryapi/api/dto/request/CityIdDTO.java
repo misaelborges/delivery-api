@@ -1,10 +1,10 @@
-package com.misaeborges.deliveryapi.api.dto;
+package com.misaeborges.deliveryapi.api.dto.request;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class CuisineIdDTO {
+public class CityIdDTO {
 
     @NotNull
     private Long id;

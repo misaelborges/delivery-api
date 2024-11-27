@@ -2,8 +2,8 @@ package com.misaeborges.deliveryapi.api.controllers;
 
 import com.misaeborges.deliveryapi.api.assemblers.CityRequestDisassembler;
 import com.misaeborges.deliveryapi.api.assemblers.CityResponseAssembler;
-import com.misaeborges.deliveryapi.api.dto.CityRequestDTO;
-import com.misaeborges.deliveryapi.api.dto.CityResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.request.CityRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.response.CityResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.City;
 import com.misaeborges.deliveryapi.domain.repositories.ICityRepository;
 import com.misaeborges.deliveryapi.domain.services.CityService;

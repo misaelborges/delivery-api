@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.core.modelmapper;
 
-import com.misaeborges.deliveryapi.api.dto.AddressResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.response.AddressResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.Address;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

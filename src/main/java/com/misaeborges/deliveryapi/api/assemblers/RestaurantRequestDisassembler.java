@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.api.assemblers;
 
-import com.misaeborges.deliveryapi.api.dto.RestaurantRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.request.RestaurantRequestDTO;
 import com.misaeborges.deliveryapi.domain.models.Cuisine;
 import com.misaeborges.deliveryapi.domain.models.Restaurant;
 import org.modelmapper.ModelMapper;

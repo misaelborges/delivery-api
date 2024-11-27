@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.api.assemblers;
 
-import com.misaeborges.deliveryapi.api.dto.CityRequestDTO;
+import com.misaeborges.deliveryapi.api.dto.request.CityRequestDTO;
 import com.misaeborges.deliveryapi.domain.models.City;
 import com.misaeborges.deliveryapi.domain.models.State;
 import org.modelmapper.ModelMapper;

@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.api.assemblers;
 
-import com.misaeborges.deliveryapi.api.dto.CityResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.response.CityResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.City;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

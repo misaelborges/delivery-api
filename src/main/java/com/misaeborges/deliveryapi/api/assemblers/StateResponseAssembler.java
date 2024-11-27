@@ -1,6 +1,6 @@
 package com.misaeborges.deliveryapi.api.assemblers;
 
-import com.misaeborges.deliveryapi.api.dto.StateResponseDTO;
+import com.misaeborges.deliveryapi.api.dto.response.StateResponseDTO;
 import com.misaeborges.deliveryapi.domain.models.State;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

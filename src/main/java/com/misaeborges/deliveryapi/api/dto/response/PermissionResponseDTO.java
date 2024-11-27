@@ -1,4 +1,4 @@
-package com.misaeborges.deliveryapi.api.dto;
+package com.misaeborges.deliveryapi.api.dto.response;
 
 import lombok.Data;
 
