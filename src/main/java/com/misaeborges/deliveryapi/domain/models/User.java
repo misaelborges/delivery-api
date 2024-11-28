@@ -41,4 +41,12 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "group_id"))
     private List<Group> groups = new ArrayList<>();
+
+    public void assignToGroup(Group group) {
+        getGroups().add(group);
+    }
+
+    public void unassignFromGroup(Group group) {
+        getGroups().remove(group);
+    }
 }

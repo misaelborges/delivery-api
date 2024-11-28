@@ -4,7 +4,7 @@ delete from city;
 delete from cuisine;
 delete from state;
 delete from grupo;
-delete from grupo_permission;
+delete from group_permission;
 delete from permission;
 delete from restaurant;
 delete from users;
@@ -47,7 +47,7 @@ insert into permission (id, name, description) values (2, 'EDITAR_COZINHAS', 'Pe
 
 insert into grupo (name) values ('Gerente'), ('Vendedor'), ('Secretária'), ('Cadastrador');
 
-insert into grupo_permission (group_id, permission_id) values (1, 1), (1, 2), (2, 1), (2, 2), (3, 1);
+insert into group_permission (group_id, permission_id) values (1, 1), (1, 2), (2, 1), (2, 2), (3, 1);
 
 insert into users (id, name, email, password, registration_date) values
 (1, 'João da Silva', 'joao.ger@algafood.com', 'joao123456', utc_timestamp),
