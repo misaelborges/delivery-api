@@ -11,6 +11,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -46,5 +47,8 @@ public class Restaurant {
 
     @Embedded
     private Address address;
+
+    @OneToMany(mappedBy = "restaurant")
+    private List<Product> products;
 
 }
