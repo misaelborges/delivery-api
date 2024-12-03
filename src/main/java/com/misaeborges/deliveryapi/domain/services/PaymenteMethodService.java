@@ -21,6 +21,7 @@ public class PaymenteMethodService {
         return paymentMethodRepository.save(paymentMethod);
     }
 
+    @Transactional
     public void delete(Long id) {
         PaymentMethod paymentMethod = searchEngine(id);
         try {
