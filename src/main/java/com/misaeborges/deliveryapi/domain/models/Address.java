@@ -16,7 +16,7 @@ public class Address {
     @Column(name = "address_number")
     private String number;
 
-    @Column(name = "additional_address_details")
+    @Column(name = "address_complement")
     private String additionalAddressDetails;
 
     @Column(name = "address_neighborhood")
