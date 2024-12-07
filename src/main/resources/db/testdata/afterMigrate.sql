@@ -11,6 +11,8 @@ delete from product;
 delete from restaurant;
 delete from users;
 delete from user_group;
+delete from orders;
+delete from order_item;
 
 set foreign_key_checks = 1;
 
@@ -75,3 +77,15 @@ insert into users (id, name, email, password, registration_date) values
 (5, 'Manoel Lima', 'manoel.loja@gmail.com', 'manoel123456', utc_timestamp);
 
 insert into user_group (user_id, group_id) values (1, 1), (1, 2), (2, 2), (3, 2), (4, 3), (5, 4);
+
+insert into orders (id, restaurant_id, customer_user_id, payment_method_id, address_city_id, address_cep,
+                    address_street, address_number, address_complement, address_neighborhood, order_status, creation_date,
+                    subtotal, shipping_fee, total_value)
+values (1, 1, 1, 1, 1, '38400-000', 'Rua Floriano Peixoto', '500', 'Apto 801', 'Brasil',
+        'CRIADO', utc_timestamp, 298.90, 10.00, 308.90);
+
+insert into orders (id, restaurant_id, customer_user_id, payment_method_id, address_city_id, address_cep,
+                    address_street, address_number, address_complement, address_neighborhood, order_status, creation_date,
+                    subtotal, shipping_fee, total_value)
+values (2, 4, 1, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
+        'CRIADO', utc_timestamp, 79, 0, 79);
